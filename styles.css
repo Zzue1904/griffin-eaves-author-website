@@ -1,0 +1,554 @@
+:root {
+  --ink: #232421;
+  --paper: #f1eee7;
+  --moss: #4f5c48;
+  --terracotta: #a65339;
+  --line: rgba(35, 36, 33, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "DM Sans", sans-serif;
+}
+
+.site-header {
+  height: 96px;
+  padding: 0 5.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+}
+
+.logo span {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.12em;
+}
+
+.logo i {
+  width: 1px;
+  height: 19px;
+  background: var(--ink);
+}
+
+.logo em {
+  font-style: normal;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+}
+
+nav a {
+  color: var(--ink);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+nav a.active {
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.hero {
+  min-height: 670px;
+  padding: 86px 10vw 80px 12vw;
+  display: grid;
+  grid-template-columns: 1.3fr 0.84fr;
+  gap: 7vw;
+}
+
+.eyebrow {
+  margin: 0 0 24px;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.hero h1,
+.page-heading h1,
+.contact h1 {
+  font-size: clamp(50px, 6vw, 88px);
+}
+
+.intro,
+.page-heading > p,
+.book-description,
+.contact > p {
+  max-width: 420px;
+  line-height: 1.7;
+}
+
+.hero-image {
+  height: 426px;
+  background: center / cover url("images/Griffin1.jpeg");
+  filter: grayscale(100%);
+}
+
+.image-caption {
+  font: 10px "DM Mono", monospace;
+  letter-spacing: 0.08em;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 7px;
+  color: var(--ink);
+  border-bottom: 1px solid currentColor;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 22px;
+  color: #fff;
+  background: var(--ink);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.home-books {
+  padding: 105px 12vw;
+  color: #f5f0e7;
+  background: var(--moss);
+}
+
+.home-books h2 {
+  margin-bottom: 25px;
+  font-size: clamp(42px, 5vw, 68px);
+}
+
+.home-books p:not(.eyebrow) {
+  max-width: 450px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.home-books .button {
+  color: var(--ink);
+  background: #f5f0e7;
+}
+
+.page {
+  padding: 85px 10vw 110px;
+}
+
+.page-heading {
+  max-width: 700px;
+  margin-bottom: 70px;
+}
+
+.page-heading h1 {
+  margin-bottom: 30px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 55px 30px;
+}
+
+.cover {
+  height: 390px;
+  padding: 28px;
+  display: grid;
+  place-items: center;
+  color: #20231f;
+}
+
+.cover > div {
+  width: 100%;
+  height: 100%;
+  padding: 28px 10px;
+  border: 1px solid currentColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cover small,
+.cover span {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+
+.cover b {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+}
+
+.cover-one {
+  background: center / cover url("images/cover_1.png");
+}
+
+.cover-two {
+  background: center / cover url("images/cover_2.png");
+}
+
+.cover-three {
+  background: center / cover url("images/cover_3.png");
+}
+
+.cover-four {
+  background: center / cover url("images/cover_4.png");
+}
+
+.book-meta {
+  padding-top: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-meta p {
+  margin: 0 0 6px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.book-meta small {
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+.book-meta a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 12px;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 4px;
+}
+
+.book-page {
+  padding: 65px 12vw 110px;
+}
+
+.back-link {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.book-detail {
+  margin: 55px 0 120px;
+  display: grid;
+  grid-template-columns: minmax(260px, 420px) 1fr;
+  gap: 9vw;
+  align-items: center;
+}
+
+.book-detail h1 {
+  font-size: clamp(48px, 6vw, 82px);
+}
+
+.book-year {
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+.excerpt {
+  max-width: 730px;
+  padding-top: 70px;
+  border-top: 1px solid var(--line);
+}
+
+.excerpt h2 {
+  margin-bottom: 35px;
+  font-size: clamp(38px, 4vw, 58px);
+}
+
+.excerpt p {
+  max-width: 650px;
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+  line-height: 1.7;
+}
+
+.about {
+  min-height: 650px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-photo {
+  min-height: 650px;
+  background: center / cover url("images/Griffin2.jpeg");
+  filter: grayscale(100%);
+}
+
+.about-copy {
+  padding: 105px 14%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-copy h1 {
+  font-size: clamp(38px, 4vw, 58px);
+}
+
+.about-copy p {
+  line-height: 1.7;
+}
+
+.contact {
+  min-height: 680px;
+  padding: 108px 12vw;
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 380px);
+  gap: 70px;
+  align-items: center;
+  color: #fff5e8;
+  background: var(--terracotta);
+}
+
+.contact h1 {
+  font-size: clamp(55px, 7vw, 96px);
+}
+
+.contact-content > p:not(.eyebrow) {
+  max-width: 370px;
+  line-height: 1.6;
+  margin: 30px 0;
+}
+
+.contact-photo {
+  min-height: 450px;
+  background: center / cover url("images/Griffin3.jpeg");
+}
+
+.contact-email {
+  display: inline-block;
+  padding-bottom: 8px;
+  color: inherit;
+  border-bottom: 1px solid currentColor;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.contact-email span {
+  margin-left: 22px;
+}
+
+footer {
+  padding: 32px 5.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+}
+
+footer p {
+  margin: 0;
+  color: #686760;
+}
+
+footer div {
+  display: flex;
+  gap: 20px;
+}
+
+footer a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+/* Páginas individuales de capítulos */
+
+.chapter-page {
+  padding: 65px 12vw 110px;
+}
+
+.chapter-reading {
+  max-width: 720px;
+  margin: 75px auto 0;
+}
+
+.chapter-reading h1 {
+  margin-bottom: 45px;
+  font-size: clamp(48px, 6vw, 78px);
+}
+
+.chapter-text {
+  padding-top: 35px;
+  border-top: 1px solid var(--line);
+}
+
+.chapter-text p {
+  margin: 0 0 28px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(19px, 2vw, 23px);
+  line-height: 1.75;
+}
+
+/* Sección final de la ficha del libro */
+
+.request-book {
+  max-width: 730px;
+  margin: 0 auto;
+  padding-top: 65px;
+  border-top: 1px solid var(--line);
+}
+
+/* Diseño para móvil */
+
+
+@media (max-width: 700px) {
+  .site-header {
+    height: 75px;
+    padding: 0 7vw;
+  }
+
+  nav {
+    gap: 16px;
+  }
+
+  nav a {
+    font-size: 11px;
+  }
+
+  .logo em {
+    display: none;
+  }
+
+  .hero,
+  .about,
+  .book-detail {
+    display: block;
+  }
+
+  .hero {
+    padding: 60px 7vw 75px;
+  }
+
+  .hero-image-wrap {
+    margin-top: 48px;
+  }
+
+  .hero-image {
+    height: 380px;
+  }
+
+  .page,
+  .book-page {
+    padding: 65px 7vw;
+  }
+
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cover {
+    height: 420px;
+  }
+
+  .book-detail {
+    margin: 40px 0 80px;
+  }
+
+  .book-detail .cover {
+    margin-bottom: 40px;
+  }
+
+  .about-photo {
+    min-height: 450px;
+  }
+
+  .about-copy {
+    padding: 75px 7vw;
+  }
+
+  .contact {
+    min-height: auto;
+    padding: 75px 7vw;
+  }
+
+  footer {
+    padding: 28px 7vw;
+  }
+
+  footer .logo,
+  footer div {
+    display: none;
+  }
+  .contact {
+  grid-template-columns: 1fr;
+  gap: 45px;
+}
+
+.contact-photo {
+  min-height: 360px;
+}
+
+ .chapter-page {
+    padding: 65px 7vw;
+  }
+
+  .chapter-reading {
+    margin-top: 50px;
+  }
+
+  .chapter-text p {
+    font-size: 19px;
+  }
+}
+
+.chapter-actions {
+  max-width: 720px;
+  margin: 70px auto 0;
+  padding-top: 35px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.secondary-button {
+  display: inline-block;
+  padding: 13px 20px;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  text-decoration: none;
+  font-size: 13px;
+}
